@@ -1,4 +1,4 @@
-name: WordPress deploy
+name: WordPress deployment
 
 on:
   push:
@@ -7,12 +7,14 @@ on:
     branches: [master]
 
 jobs:
-  deploy_in_server:
+  deploy_to_server:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
       - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: "50.62.142.99"
           username: "root_prod@praxispharmaceutical.com.co"

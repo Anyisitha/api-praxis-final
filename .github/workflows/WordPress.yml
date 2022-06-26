@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  deploy in server:
+  deploy_in_server:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

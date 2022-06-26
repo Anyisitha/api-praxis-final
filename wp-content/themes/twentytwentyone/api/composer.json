@@ -1,0 +1,13 @@
+{
+    "require": {
+        "protonlabs/illuminate-foundation": "^7.2",
+        "illuminate/events": "^8.83",
+        "illuminate/database": "^8.83",
+        "illuminate/routing": "^8.83"
+    },
+    "autoload": {
+        "classmap": [
+            "classes"
+        ]
+    }
+}

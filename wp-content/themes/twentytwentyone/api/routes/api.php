@@ -16,11 +16,11 @@ use App\Http\Controllers\AliadosController;
 
 class Routes
 {
-    public ?HomeController $home = null;
-    public ?ComplementsController $complements = null;
-    public ?TerapeuticNumberController $terapeutic_number = null;
-    public ?ProductsController $products = null;
-    public ?AliadosController $aliados = null;
+    public $home = null;
+    public $complements = null;
+    public $terapeutic_number = null;
+    public $products = null;
+    public $aliados = null;
 
     public function __construct()
     {

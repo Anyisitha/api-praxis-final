@@ -16,11 +16,11 @@ use App\Http\Controllers\Web\TerapeuticNumberController;
 
 class RoutesWeb
 {
-    public ?HomeController $home = null;
-    public ?TerapeuticNumberController $terapeutic_number = null;
-    public ?AuthController $auth = null;
-    public ?ProductsController $products = null;
-    public ?BlogController $blog = null;
+    public $home = null;
+    public $terapeutic_number = null;
+    public $auth = null;
+    public $products = null;
+    public $blog = null;
 
     public function __construct()
     {

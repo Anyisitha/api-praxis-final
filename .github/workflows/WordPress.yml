@@ -19,4 +19,4 @@ jobs:
           server: "50.62.142.99"
           username: "root_prod@praxispharmaceutical.com.co"
           password: "Praxis123*"
-          server-dir: "api_prod/"
+          server-dir: "/api_prod/"

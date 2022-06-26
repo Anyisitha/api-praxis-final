@@ -29,7 +29,7 @@ define( 'DB_USER', 'root_prod' );
 define( 'DB_PASSWORD', 'Praxis123*' );
 
 /** Database hostname */
-define( 'DB_HOST', '50.62.142.99' );
+define( 'DB_HOST', 'praxispharmaceutical.com.co' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );

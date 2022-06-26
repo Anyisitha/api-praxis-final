@@ -2,10 +2,10 @@
 
 namespace Api;
 
-require get_template_directory() . "/api/resources/views/home/home.php";
-require dirname(__DIR__) . "/api/resources/views/terapeutic_number/teraupetic_number.php";
+require_once __DIR__ . "/resources/views/Aliados/aliados.php";
+require_once __DIR__ . "/resources/views/home/home.php";
+require_once __DIR__ . "/resources/views/terapeutic_number/teraupetic_number.php";
 require_once __DIR__ . "/resources/views/Products/products.php";
-require dirname(__DIR__) . "/api/resources/views/aliados/aliados.php";
 require get_template_directory() . "/api/routes/api.php";
 require get_template_directory() . "/api/routes/web.php";
 

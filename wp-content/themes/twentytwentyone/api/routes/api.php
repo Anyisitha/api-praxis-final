@@ -3,7 +3,7 @@
 namespace Api;
 
 require dirname(__DIR__) . "/app/http/controllers/HomeController.php";
-require_once dirname(__DIR__) . "/app/Http/Controllers/ComplementsController.php";
+require_once dirname(__DIR__) . "/app/http/controllers/ComplementsController.php";
 require_once dirname(__DIR__) . "/app/http/controllers/TerapeuticNumber.php";
 require_once dirname(__DIR__) . "/app/http/controllers/ProductsController.php";
 require_once dirname(__DIR__) . "/app/http/controllers/AliadosControllers.php";

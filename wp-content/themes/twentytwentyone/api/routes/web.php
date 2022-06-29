@@ -4,10 +4,10 @@ namespace Api;
 
 require dirname(__DIR__) . "/app/http/controllers/Web/HomeController.php";
 
-require_once dirname(__DIR__) . "/app/Http/Controllers/Web/TerapeuticNumberController.php";
-require_once dirname(__DIR__) . "/app/Http/Controllers/AuthController.php";
-require_once dirname(__DIR__) . "/app/Http/Controllers/Web/ProductsController.php";
-require_once dirname(__DIR__) . "/app/Http/Controllers/Web/BlogController.php";
+require_once dirname(__DIR__) . "/app/http/controllers/Web/TerapeuticNumberController.php";
+require_once dirname(__DIR__) . "/app/http/controllers/AuthController.php";
+require_once dirname(__DIR__) . "/app/http/controllers/Web/ProductsController.php";
+require_once dirname(__DIR__) . "/app/http/controllers/Web/BlogController.php";
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Web\BlogController;

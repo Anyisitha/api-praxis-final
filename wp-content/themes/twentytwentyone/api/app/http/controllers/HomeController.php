@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 require dirname(__DIR__, 3) . "/vendor/autoload.php";
 require dirname(__DIR__, 3) . "/bootstrap/bootstrap.php";
-require dirname(__DIR__) . "/Controllers/Controller.php";
+require dirname(__DIR__) . "/controllers/Controller.php";
 require dirname(__DIR__, 2) . "/Models/ContentPage.php";
 // require dirname(__DIR__, 2) . "/Models/Page.php";
 

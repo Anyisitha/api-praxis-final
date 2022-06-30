@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 const useApp = () => {
   /** Axios config */
-  axios.defaults.baseURL = "http://127.0.0.1:8000/wp-json";
+  axios.defaults.baseURL = "https://api.praxispharmaceutical.com.co/wp-json";
 
   /** Variables */
   const heads = [

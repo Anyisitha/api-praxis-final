@@ -42,6 +42,9 @@ class Api
         $this->aliados = new Aliados();
         $this->routes = new Routes();
         $this->webRoutes = new RoutesWeb();
+
+        add_action( 'phpmailer_init', array($this, 'mailerConfig'), 1, 1);
+        add_action( 'wp_mail_failed', array($this, 'onMailError'), 10, 1 );
     }
 
     /**
@@ -54,7 +57,18 @@ class Api
             "Administrador de contenido | Api Praxis",
             "Administrador de contenido",
             "manage_links",
+            "content_admin"
+        );
+
+        /** Home Submenu */
+        add_submenu_page(
             "content_admin",
+            "Home - Content Admin | Praxis' Api",
+            "Home",
+            "manage_options",
+            "home-content-admin",
+            array($this->home, "HomeView"),
+            1
         );
 
         add_submenu_page(
@@ -96,5 +110,29 @@ class Api
             array($this->aliados, "AliadosView"),
             4
         );
+
     }
+
+    /**
+     * This function is used from configurate the mailer for send emails.
+     * @param any $phpmailer with the construct the mailer.
+     * @return void
+     */
+    public function mailerConfig( $phpmailer )
+    {
+        $phpmailer->Host = "mail.praxispharmaceutical.com.co";
+        $phpmailer->Port = 587;
+        $phpmailer->Username = "_mainaccount@praxispharmaceutical.com.co";
+        $phpmailer->Password = "yy?8~Gu)?5";
+        $phpmailer->SMTPAuth = true;
+        $phpmailer->SMTPSecure = "tls";
+        $phpmailer->isSMTP();
+    }
+    
+     
+    public function onMailError( $wp_error ) {
+        echo "<pre>";
+        echo json_encode($wp_error);
+        echo "</pre>";
+    }   
 }

@@ -8,10 +8,10 @@ $capsule = new Capsule();
 
 $capsule->addConnection([
     "driver" => "mysql",
-    "host" => "127.0.0.1",
-    "database" => "praxis",
-    "username" => "root",
-    "password" => ""
+    "host" => "praxispharmaceutical.com.co",
+    "database" => "praxis_local",
+    "username" => "root_prod",
+    "password" => "Praxis123*"
 ]);
 
 $capsule->setAsGlobal();

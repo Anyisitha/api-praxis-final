@@ -7,6 +7,7 @@ require dirname(__DIR__, 2) . "/Models/User.php";
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -83,6 +84,8 @@ class AuthController extends Controller
     {
         global $wpdb;
 
+        
+
         $status = false;
         $result = null;
         $wpdb->query("START TRANSACTION");
@@ -91,7 +94,6 @@ class AuthController extends Controller
             $user->status_id = 1;
             $user->save();
 
-            add_action( 'phpmailer_init', array($this, 'mailerConfig') );
             wp_mail($user->email, "Activación Cuenta Praxis", "Su cuenta en la plataforma de praxis fue activada exitosamente.");
 
             $status = true;
@@ -100,7 +102,7 @@ class AuthController extends Controller
             $result = $th->getMessage();
             $wpdb->query("ROLLBACK");
         }if($status){
-            return $this->response($status, ["type" => "success", "content" => "Usuario Eliminado"], []);
+            return $this->response($status, ["type" => "success", "content" => "Usuario activado"], []);
         }else{
             return $this->response($status, ["type" => "error", "content" => "Ocurrio un problema al momento de eliminar el usuario."], $result);
         }

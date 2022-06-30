@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'praxis_prod' );
+define( 'DB_NAME', 'praxis_local' );
 
 /** Database username */
 define( 'DB_USER', 'root_prod' );
@@ -95,3 +95,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+add_filter('deprecated_function_trigger_error', 'disable_all_deprecated_warnings');
+add_filter('deprecated_argument_trigger_error', 'disable_all_deprecated_warnings');
+add_filter('deprecated_file_trigger_error',     'disable_all_deprecated_warnings');
+//Not to trigger any errors when a deprecated function or method is called.
+add_filter( 'deprecated_hook_trigger_error',    'disable_all_deprecated_warnings');
+function disable_all_deprecated_warnings() {
+    return false;
+}

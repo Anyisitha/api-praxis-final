@@ -80,19 +80,5 @@ class Controller extends BaseController
         return $wordpress_upload_dir["url"] . "/" . basename($newFilePath);
     }
 
-    /**
-     * This function is used from configurate the mailer for send emails.
-     * @param any $phpmailer with the construct the mailer.
-     * @return void
-     */
-    public function mailerConfig( $phpmailer )
-    {
-        $phpmailer->Host = "smtp.gmail.com";
-        $phpmailer->Port = 465;
-        $phpmailer->Username = "nelson.arevalo2119@gmail.com";
-        $phpmailer->Password = "zkozfaipnitxyfun";
-        $phpmailer->SMTPAuth = true;
-        $phpmailer->SMTPSecure = "ssl";
-        $phpmailer->isSMTP();
-    }
+    
 }

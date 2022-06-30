@@ -106,7 +106,7 @@ const App = () => {
 
   return (
     <Container maxWidth="xl">
-      <StyledTitle>Home content manager</StyledTitle>
+      <StyledTitle>Products content manager</StyledTitle>
       <Grid md={12} style={{ marginBottom: "1rem" }}>
         <Button color="primary" variant="outlined" onClick={openModal}>
           Create content
@@ -131,7 +131,7 @@ const App = () => {
                   <TableCell>{item.section}</TableCell>
                   <TableCell>{item.type_content.name}</TableCell>
                   <TableCell>
-                    {item.type_content_id === 1 ? (
+                    {item.type_content_id === "1" ? (
                       <span>{item.content}</span>
                     ) : (
                       <img

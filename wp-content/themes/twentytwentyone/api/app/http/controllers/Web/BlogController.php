@@ -64,4 +64,12 @@ class BlogController extends Controller
 
         return $this->response(true, ["type" => "success", "content" => "Done."], $postsArray);
     }
+
+    public function sendContact($request)
+    {
+        $name = $request["name"];
+        $email = $request["email"];
+        $message = $request["message"];
+        wp_mail("anyilozano@eml.co", "Registro de contacto praxis","El usuario $name y correo electronico $email dejo el siguiente mensaje '$message'");
+    }
 }

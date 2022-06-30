@@ -137,5 +137,10 @@ class RoutesWeb
             "methods" => "GET",
             "callback" => array($this->blog, "getPosts")
         ));
+
+        register_rest_route("contact", "send-contact", array(
+            "methods" => "POST",
+            "callback" => array($this->blog, "sendContact")
+        ));
     }
 }

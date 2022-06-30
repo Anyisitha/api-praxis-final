@@ -73,16 +73,6 @@ class Api
 
         add_submenu_page(
             "content_admin",
-            "Home - Administrador de contenido | Api Praxis",
-            "Home",
-            "manage_options",
-            "home_content_admin",
-            array($this->home, "HomeView"),
-            1
-        );
-
-        add_submenu_page(
-            "content_admin",
             "Lineas Terapeuticas - Administrador de contenido | Api Praxis",
             "Lineas Terapeuticas",
             "manage_options",
